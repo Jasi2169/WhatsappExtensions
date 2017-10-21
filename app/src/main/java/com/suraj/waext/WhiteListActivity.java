@@ -268,14 +268,5 @@ public class WhiteListActivity extends AppCompatActivity implements WhiteListCon
         });
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        File prefsDir = new File(this.getApplicationInfo().dataDir, "shared_prefs");
-        File prefsFile = new File(prefsDir, Utils.MYPREFS + ".xml");
-        if (prefsFile.exists()) {
-            prefsFile.setReadable(true, false);
-        }
-    }
 
 }
